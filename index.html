@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Musicology
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.1/animate.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    
+<!--      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>-->
+     <script defer src="fontawesome/js/all.js"></script><!-- load all styles -->
+      
+
+</head>
+<body>
+<div class="nav">
+    <div class="menu">
+    <img src="images/img.png" alt="" class="img-responsive">
+    </div>
+    <div class="menu_bar">
+        <ul>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">Our Class</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#" onclick="document.getElementById('loginId').style.display='block'">Register</a></li>
+        </ul>
+</div>
+</div>
+    <div class="modal" id="loginId">
+        <form action="#" method="post" class="modal-content">
+            <div class="img-content animate">
+                <span class="close-btn" onclick="document.getElementById('loginId').style.display='none'">&times;</span>
+            </div>
+            <div class="container">
+                <label for="Username">
+                    <b>Username:</b>
+                </label>
+                <input type="text" placeholder="Enter username" name="Username" required>
+                <label for="Password">
+                    <b>Password:</b>
+                </label>
+                <input type="password" placeholder="Enter password" name="password" required>
+                <button type="submit" class="submit"> Login</button>
+                <label><input type="checkbox" checked="checked" name="remember">Remember me</label>
+            </div>
+            <div class="container">
+                <button type="button" class="cancelbtn" onclick="document.getElementById('loginId').style.display='none'">Cancel</button>
+                <span class="f-psw"><a href="#">Forget password?</a></span>
+            </div>
+        </form>
+
+    </div>
+<section class="sec">
+  <div class="row">
+       <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 leeft">
+           <img src="images/img1.jpg" alt="" class="img-responsive">
+           <div class="img">
+               <img src="images/img5.png" alt="" class="img-responsive">
+           </div>
+       </div>
+        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 riight">
+              
+               <div class="imgone">
+                   <img src="images/img3.png" alt="" class="img-responsive">
+               </div>
+                 <div class="imgtwo">
+                   <img src="images/img4.png" alt="" class="img-responsive">
+               </div>
+                <div class="overlat">
+                       <div class="text">
+                        <h1 class="dance">Dance night</h1>
+                        <p class="gh">learn all about our innovative pointe shoes.
+                        </p>
+                        <button class="btn" onclick="document.getElementById('loginId').style.display='block'">
+                            <p class="a">Resigter Now</p>
+                        </button>
+                        
+                    </div>
+                    <div class="social">
+                        <div class="follow col-sm-12">
+                           <ul>
+                                <li><a href="https://www.instagram.c om/tygaeliano/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li><a href="https://www.facebook.com/xavier.eliano.7" target="_blank"><i class="fab fa-facebook"></i></a>
+                                </li>
+                                <li><a href="https://twitter.com/mrxavierelino" target="_blank"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li><a href="https://github.com/xavereliano" target="_blank"><i class="fab fa-github-square"></i></a>
+                                </li>
+                        </ul>
+               </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!--
+  <i class="fas fa-user"></i>  uses solid style 
+  <i class="fab fa-github-square"></i>  uses brand style 
+-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<!-- 
+ <script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="jquery/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.min.js"></script>  -->
+
+<script type="text/javascript">
+        $(document).ready(function(){
+        $('.menu').click(function(){
+            $('.menu').toggleClass('active')
+            $('.menu_bar').toggleClass('active')
+        });
+    });
+    
+    //get the modal
+        var modal = document.getElementById('loginId');
+        
+    // when the user clicks anywhere outsite of the modal , close it 
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+</script>
+
+
+</body>
+</html>

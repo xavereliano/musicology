@@ -1,0 +1,403 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Montserrat;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index:5;
+}
+.nav .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.nav .menu img{
+    width: 100px;
+    margin: 20px;
+}
+.nav .menu_bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    transition: 0.5s;
+    transform: translateX(-100%);
+}
+.nav .menu_bar.active{
+     transform: translateX(0);
+}
+.nav .menu_bar ul{
+    display: flex;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    padding: 0;
+    float: right;
+    
+}
+.nav .menu_bar ul li{
+    list-style: none;}
+.nav .menu_bar ul li a{
+    line-height: 60px;
+    font-family: sans-serif;
+    text-transform: Montserrat;
+    font-weight: Medium;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 20px;
+    display: block;
+}
+.nav .menu_bar ul li:last-child a{
+    border-right: none;
+}
+.nav .menu_bar ul li a:hover{
+    color: #464645;
+}
+
+section.sec{
+    height: 100vh;
+    overflow: hidden;
+}
+section.sec .leeft{
+    height: 100vh;
+    overflow: hidden;
+} 
+section.sec .leeft img{
+    width: 100%;
+    position: absolute;
+}
+section.sec .leeft .img{
+    position: absolute;
+        width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+section.sec .leeft .img img{
+    margin-left: -60px;
+    margin-top: 60vh;
+}
+section.sec .riight{
+    background-color: #e8631c;
+    height: 100vh;
+}
+section.sec .riight .imgone{
+     position: absolute;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    top: -86vh;
+    z-index: 2;
+    left: -50vh;
+}
+section.sec .riight .imgtwo{
+     position: absolute;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+section.sec .riight .imgtwo img{
+        position: absolute;
+    margin-top: 50vh;
+    margin-left: 0;
+    width: 100%;
+}
+section.sec .riight .imgone img{
+    position: absolute;
+    width: 800px;
+}
+section.sec .riight .overlat{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+section.sec .riight .overlat .text{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 80%;
+    transform: translate(-10%, -30%);
+    color: #ffffff;
+    z-index: 10;
+}
+section.sec .riight .overlat .text .dance{
+    text-transform: uppercase;
+    font-size: 63px;
+    font-family: Oswald;
+    font-weight: semibold;
+    padding-bottom: 20px;
+}
+section.sec .riight .overlat .gh{
+    font-size: 20px;
+    font-family: Oswald;
+    font-weight: semibold;
+    margin-bottom: 30px;
+}
+section.sec .riight .overlat .btn{
+     text-align: center;
+    width: 280px;
+    height: 60px;
+    background-color: #b64d15;
+    cursor: pointer;
+}
+section.sec .riight .overlat .btn .a{
+    color: #fff;
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* Extra style for the cancel button */
+.cancelbtn{
+    width: auto;
+    padding: 10px 18px;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+}
+.cancelbtn:hover{
+    opacity: 0.8;
+    background-color: #e8631c;
+    color: #fff;
+}
+/* Extra style for the login button */
+.login-btn{
+    width: auto;
+    padding: 10px 18px;
+    margin-left: 30px;
+    border-radius: 0;
+}
+
+/* center the image and position the close button */
+.img-content{
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position:relative;
+}
+.container{
+    padding: 16px;
+}
+span.f-psw{
+    float: right;
+    padding-top: 12px;
+}
+
+/*full width input fields */
+input[type="text"] , input[type="password"]
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* the modal background */
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    width: 100%;
+        height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+}
+/* the modal content/box */
+.modal-content{
+    background-color: #b64d15;
+    margin: 2% auto 6% auto;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 60%;
+}
+
+/* the close button (X)*/
+.close-btn{
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-btn:hover,
+.close-btn:focus{
+    color: #ffffff;
+}
+/* add zoom animation */
+.animate{
+    -webkit-animation: animateZoom 0.6s;
+    animation: animateZoom 0.6s;
+}
+@-webkit-keyframes animateZoom{
+    from{-webkit-transform: scale(0)}
+    to{-webkit-transform: scale(1)}
+}
+@keyframes animateZoom{
+    from{transform: scale(0)}
+    to{transform: scale(1)}
+}
+/* change the style for the span & cancel button on extra small screen */
+@media screen and (max-width:300px)
+{
+    span.f-psw{
+        display: block;
+        float: none;
+    } 
+    .cancelbtn{
+        width: 100%;
+    }
+}
+
+
+section.sec .social{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    height: 100px;
+    z-index: 2;
+}
+section.sec .social .follow{
+    width:90%;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+section.sec .social  .follow ul{
+    display: flex;
+    padding-left: 30%;
+}
+section.sec .social  .follow ul li{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-left: 20px;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+section.sec .social  .follow ul li:hover{
+    background: #e8631c;
+    border-bottom: 2px solid #fff;
+}
+section.sec .social  .follow ul li:hover a{
+    color: #ffffff;
+}
+section.sec .social  .follow ul li a{
+    color: #e8631c;
+    font-size: 30px;
+    line-height: 2;
+    transition: 0.5s ease-in-out;
+}
+section.sec .riight .overlat:before{
+    position: absolute;
+    content: ' ';
+    height: 100vh;
+    width: 260px;
+    background: #e8631c;
+    left: -210px;
+    z-index: 1;
+    transform: skewX(10deg);
+}
+section.sec .riight .overlat:after{
+    position: absolute;
+    content: ' ';
+    height: 100vh;
+    width: 340px;
+    background-image: url(../images/img2.png);
+    left: -400px;
+}
+@media (max-width:768px){
+    /*sec1*/
+    .nav .menu_bar{
+        height: auto;
+    } 
+    .nav .menu_bar ul{
+        display: inherit;
+        float: none;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+    } 
+    .nav .menu_bar ul a{
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    section.sec .leeft img{
+        width: 130%;
+    }
+    section.sec .riight .overlat:before{
+    width: 90px;
+    left: -60px;
+}
+    section.sec .riight .overlat:after{
+    width: 180px;
+    left: -200px;
+}
+    section.sec .riight .overlat .text{
+        top: 20%;
+        left: 0;
+        width: 90%;
+        transform: translate(0, -30%);
+        z-index: 2;
+}
+    section.sec .riight .overlat .gh{
+        font-size: 20px;
+        margin-bottom: 30px;
+}
+    section.sec .riight .overlat .btn{
+         text-align: center;
+        width: 280px;
+        height: 60px;
+        background-color: #b64d15;
+        cursor: pointer;
+}
+    
+    section.sec .social .follow{
+        width:100%;
+    }
+    section.sec .social  .follow ul{
+    padding-left: 10%;
+}
+    section.sec .social .follow ul li {
+        width: 50px;
+        height: 50px;
+    }
+    section.sec .social .follow ul li a {
+        font-size: 25px;}
+    
+section.sec .riight .imgone{
+    top: -100vh;
+    left: -30vh;
+}
+section.sec .riight .imgtwo img{
+    margin-top: 50vh;
+    margin-left: 0;
+    width: 100%;
+}
+section.sec .riight .imgone img{
+    width: 640px;
+}
+}
